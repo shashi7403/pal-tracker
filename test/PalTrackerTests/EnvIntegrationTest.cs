@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
+using PalTracker;
 
 namespace PalTrackerTests
 {
