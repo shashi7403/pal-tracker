@@ -39,6 +39,7 @@ namespace PalTracker
            }
            services.AddSingleton(sp => new WelcomeMessage(message));
            services.AddSingleton(sp => new CloudFoundryInfo(port,memoorylimit,cfinstanceIndex,cfInstancAdder));
+           services.AddSingleton<ITimeEntryRepository, InMemoryTimeEntryRepository>();
 
         }
 
@@ -58,8 +59,13 @@ namespace PalTracker
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                 name : "Default",
+                 pattern : "{controller=Home}/{action=Index}/{id?}"              
+                                 
+                );
             });
+    
         }
     }
 }
