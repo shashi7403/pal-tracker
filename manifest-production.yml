@@ -3,6 +3,6 @@ applications:
 - name: pal-tracker
   path: src/PalTracker/bin/Release/netcoreapp3.1/publish/
   routes:
-  - route: pal-tracker-mohsha-prod.cfapps.io
+  - route: pal-tracker-mh.cfapps.io
   env:
     WELCOME_MESSAGE: Hello from the production environment
